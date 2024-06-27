@@ -1,3 +1,164 @@
 @charset "utf-8";
-/* 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* 폰트 가져오기 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  border-style: none;
+  vertical-align: middle;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.14;
+  letter-spacing: 0px;
+  /* 줄바꿈 할때 단어를 기준으로 설정 
+   break-all: 줄바꿈 하지 않는다.
+    */
+  word-break: break-all;
+  height: 2000px;
+  background-color: lightslategray;
+  
+}
+/* 모달창 */
+/* top버튼 */
+/* 전체 레이아웃 */
+.wrap {
+  position: relative;
+  display: block;
+}
+/* 상단 */
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(255, 255, 255); */
+  z-index: 999;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.header:hover{
+    height: calc(330px + 80px);
+}
+.header::before{
+    content: "";
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 1px solid #d8d8d8;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header::after{
+    content: "";
+    width: 100%;
+    height: 330px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.header-inner{
+    width: 100%;
+    max-width: 1800px;
+    height: 80px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+/* 로고 */
+.logo{
+    width: 220px;
+    height: 100%;
+    float: left;
+    padding-top: 20px;
+}
+/* 네비게이션 */
+.nav{
+    width:calc(100% - 220px - 150px) ;
+    float: left;
+}
+.gnb{
+    width: calc(178px * 6);
+    margin: 0 auto;
+    
+}
+.gnb > li{
+    width: 178px;
+    float: left;
+
+}
+.gnb > li > a{
+  
+font-size: 19px;
+font-weight: 500;
+/* height: 80px; */
+line-height: 80px;
+}
+/* 서브메뉴 depth2 */
+.depth2{
+    padding: 40px 0;
+}
+.depth2>li>a{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.92;
+}
+/* 언어 */
+.lang{
+    position: relative;
+    width: 150px;
+    height: 100%;
+    float: right;
+}
+.lang-list{
+position: absolute;
+top: 20px;
+left:23px;
+
+}
+.lang-list li{
+   float: left; 
+   padding: 10px;
+   position: relative;
+}
+.lang-list li a{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #888;
+}
+.lang-list li:last-child a{
+    color: #333;
+}
+.lang-list li::after{
+    content: "";
+    width: 1px;
+    height: 11px;
+    background-color: #999;
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 0;
+}
+.lang-list li:first-child::after{
+    content: none;
+}
