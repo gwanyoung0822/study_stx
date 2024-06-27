@@ -35,6 +35,16 @@ body {
   background-color: lightslategray;
   
 }
+/* 공통영역 */
+.container{
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-color: lightcoral; */
+    /* height: 200px; */
+}
 /* 모달창 */
 /* top버튼 */
 /* 전체 레이아웃 */
@@ -72,7 +82,7 @@ body {
     width: 100%;
     height: 330px;
     position: absolute;
-    top: 80px;
+    top: 81px;
     left: 0;
     background-color: rgba(0,0,0,0.5);
 }
@@ -162,3 +172,131 @@ left:23px;
 .lang-list li:first-child::after{
     content: none;
 }
+/* 비주얼 */
+.visual{
+    position: relative;
+    top: 80px;
+    display: block;
+    width: 100%;
+    height: 910px;
+    /* background-color: lightgray; */
+    background: url("../images/img_visual01.png")no-repeat center fixed;
+    background-size: cover;
+}
+.visual-inner{
+    height: 100%;
+    padding-top: 1px;
+    position: relative;
+}
+.visual-slogan{
+    display: block;
+    position: relative;
+    font-size: 70px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 245px;
+}
+.visual-slogan::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -50px;
+    width: 60px;
+    height: 5px;
+    background-color: red;
+}
+.visual-txt{
+    position: relative;
+    display: block;
+    margin-top: 42px;
+    color: #fff;
+    font-size: 21px;
+}
+.visual-bt{
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 33px;
+    height: 33px;
+    font-size: 0;
+    transform: translateX(-50%);
+    background: url("../images/bg_common.png") no-repeat;
+    background-position: -122px 0;
+    border:0;
+    cursor: pointer;
+}
+/* 비즈니스 영역 */
+.business{
+    width: 100%;
+    position: relative;
+    display: block;
+    /* padding: 100px 0; */
+    background-color: #fff;
+}
+.business-inner{
+    height: 100%;
+    padding-top: 1px;
+    position: relative;
+}
+.business-maintext{
+    font-size: 44px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding: 100px 0 22px;
+}
+.business-text{
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    margin: 25px 0 50px 
+}
+.business-list{
+    width: 100%;
+    height: ;
+    
+    padding-bottom: 100px;
+}
+.business-area{
+    width: 100%;
+    height: 420px;
+    background-color: lightcoral;
+}
+.business-area > li{
+    width: calc(100% / 5);
+    height: 100%;
+    float: left;
+}
+.business-area1{
+    background: url(../images/img_business.png) no-repeat;
+}
+.business-area2{
+    background: url(../images/img_business.png) no-repeat;
+    background-position: -240px 0;
+}
+.business-area3{
+    background: url(../images/img_business.png)no-repeat;
+    background-position: -480px 0;
+}
+.business-area4{
+    background: url(../images/img_business.png)no-repeat;
+    background-position: -720px 0;
+}
+.business-area5{
+    background: url(../images/img_business.png)no-repeat;
+    background-position: -960px 0;
+}
+.business-area > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.business-area > li > a >p{
+    text-align: center;
+    margin-top: 100px;
+    color: #fff;
+    font-size: 25px;
+}
+/* 비즈니스 리스트 호버 */
+.business-area1
