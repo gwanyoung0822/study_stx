@@ -42,7 +42,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* background-color: lightcoral; */
+    /* background-color: lightgrey; */
     /* height: 200px; */
 }
 /* 모달창 */
@@ -175,7 +175,8 @@ left:23px;
 /* 비주얼 */
 .visual{
     position: relative;
-    top: 80px;
+    margin-top: 80px;
+    /* top: 80px; */
     display: block;
     width: 100%;
     height: 910px;
@@ -227,11 +228,12 @@ left:23px;
     cursor: pointer;
 }
 /* 비즈니스 영역 */
-.business{
+
+
+/* .business{
     width: 100%;
     position: relative;
     display: block;
-    /* padding: 100px 0; */
     background-color: #fff;
 }
 .business-inner{
@@ -297,6 +299,121 @@ left:23px;
     margin-top: 100px;
     color: #fff;
     font-size: 25px;
+} */
+
+.business{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 100px 0;
+    background-color: #f8f8f8;
+}
+.business-inner{
+    position: relative;
+    display: block;
+}
+/* 비즈니스 상단 */
+.business-top{
+    margin-bottom: 70px;
+    text-align: center;
+}
+.business-title{
+    position: relative;
+    display: block;
+    font-size: 40px;
+    color: #111;
+    font-weight: bold;
+    padding-bottom: 31px;
+}
+.business-title::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 37px;
+    height: 4px;
+    background-color: red;
+}
+.business-desc{
+    margin-top: 30px;
+}
+/* 비즈니스 하단 */
+.business-bottom, .business-list{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.business-list li{
+    position: relative;
+    display: block;
+    float: left;
+    width: calc(100% / 5);
+    height: 420px;
+    text-align: center;
+    background: url("../images/img_business.png")no-repeat;
+}
+.business-list li:nth-child(1){
+    background-position: calc(240px * 0) 0;
+}
+.business-list li:nth-child(2){
+    background-position: calc(240px * -1) 0;
+}
+.business-list li:nth-child(3){
+    background-position: -480px 0;
+}
+.business-list li:nth-child(4){
+    background-position: -720px 0;
+}
+.business-list li:nth-child(5){
+    background-position: -960px 0;
+}
+.business-list li a{
+    color: #fff;
+    font-size: 25px;
+    display: block;
+    /* line-height: 240px; */
+    padding: 100px 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244,128,37,0);
+    transition: all 0.3s;
 }
 /* 비즈니스 리스트 호버 */
-.business-area1
+.business-list li a:hover{
+    background-color: rgba(244,128,37,1);
+}
+.business-list li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 90px;
+    background: url("../images/bg_common.png")no-repeat;
+    background-position: 0 0;
+    width: 130px;
+    height: 112px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.business-list li:nth-child(1) a::after{
+    background-position: -160px 0;
+}
+.business-list li:nth-child(2) a::after{
+    background-position: -300px 0;
+}
+.business-list li:nth-child(3) a::after{
+    background-position: 0px -120px;
+}
+.business-list li:nth-child(4) a::after{
+    background-position: -140px -120px;
+}
+.business-list li:nth-child(5) a::after{
+    left: 53%;
+    bottom: 80px;
+    background-position: -275px -115px;
+}
+.business-list li a:hover::after{
+    opacity: 1;
+}
